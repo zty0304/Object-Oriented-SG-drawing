@@ -1,1 +1,1 @@
-# Object-Oriented-SG-drawing
+# Object-Oriented Scene Graph drawing
