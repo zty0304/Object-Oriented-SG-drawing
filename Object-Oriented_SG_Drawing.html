@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="D:\programming\SG\js\go.js"></script>
+    <script type="text/javascript" src="D:\programming\SG\js\vue.js"></script>
+    <link href="SG.css" rel="stylesheet">
+</head>
+<body>
+    <div style="position: absolute" id="myDiagramDiv">
+    </div>
+    
+    <div class="container">
+        <div class="from-box">
+            <!-- 属性 -->
+            <div class="attribute-box hidden">
+                <div class="attri-box">
+                    <h2>color</h2>
+                    <button onclick="AddAttFromButton(this.value)" value="red">red</button>
+                    <button onclick="AddAttFromButton(this.value)" value="green">green</button>
+                    <button onclick="AddAttFromButton(this.value)" value="blue">blue</button>
+                    <button onclick="AddAttFromButton(this.value)" value="white">white</button>
+                    <button onclick="AddAttFromButton(this.value)" value="black">black</button>
+                    <button onclick="AddAttFromButton(this.value)" value="yellow">yellow</button>
+                    <button onclick="AddAttFromButton(this.value)" value="silver">silver</button>
+                    <button onclick="AddAttFromButton(this.value)" value="gray">gray</button>
+                </div>
+                <div class="attri-box">
+                    <h2>emotion</h2>
+                    <button onclick="AddAttFromButton(this.value)" value="thinking">thinking</button>
+                    <button onclick="AddAttFromButton(this.value)" value="worried">worried</button>
+                    <button onclick="AddAttFromButton(this.value)" value="lost">lost</button>
+                    <button onclick="AddAttFromButton(this.value)" value="stern">stern</button>
+                </div>
+                <div class="attri-box">
+                    <h2>appearance</h2>
+                    <button onclick="AddAttFromButton(this.value)" value="young">young</button>
+                    <button onclick="AddAttFromButton(this.value)" value="old">old</button>
+                    <button onclick="AddAttFromButton(this.value)" value="small">small</button>
+                    <button onclick="AddAttFromButton(this.value)" value="large">large</button>
+                    <button onclick="AddAttFromButton(this.value)" value="wooden">wooden</button>
+                    <button onclick="AddAttFromButton(this.value)" value="plastic">plastic</button>
+                    <button onclick="AddAttFromButton(this.value)" value="striped">striped</button>
+                    <button onclick="AddAttFromButton(this.value)" value="bald">bald</button>
+                    <button onclick="AddAttFromButton(this.value)" value="barefoot">barefoot</button>
+                    <button onclick="AddAttFromButton(this.value)" value="asian">asian</button>
+                </div>
+                <div class="attri-box">
+                    <h2>motion</h2>
+                    <button onclick="AddAttFromButton(this.value)" value="standing">standing</button>
+                    <button onclick="AddAttFromButton(this.value)" value="sitting">sitting</button>
+                    <button onclick="AddAttFromButton(this.value)" value="smiling">smiling</button>
+                    <button onclick="AddAttFromButton(this.value)" value="playing">playing</button>
+                    <button onclick="AddAttFromButton(this.value)" value="looking">looking</button>
+                    <button onclick="AddAttFromButton(this.value)" value="flying">flying</button>
+                    <button onclick="AddAttFromButton(this.value)" value="walking">walking</button>
+                    <button onclick="AddAttFromButton(this.value)" value="eating">eating</button>
+                </div>
+                <div class="add">
+                    <h2>Add a box</h2>
+                    <button onclick="addAtt()">Add attribute</button>
+                </div>
+                
+            </div>
+            <!-- 登录 -->
+            <div class="relationship-box">
+                <div class="attri-box">
+                    <h2>Common relationship</h2>
+                    <button onclick="AddRelFromButton(this.value)" value="on">on</button>
+                    <button onclick="AddRelFromButton(this.value)" value="has">has</button>
+                    <button onclick="AddRelFromButton(this.value)" value="in">in</button>
+                    <button onclick="AddRelFromButton(this.value)" value="wears">wears</button>
+                    <button onclick="AddRelFromButton(this.value)" value="behind">behind</button>
+                    <button onclick="AddRelFromButton(this.value)" value="next to">next to</button>
+                    <button onclick="AddRelFromButton(this.value)" value="near">near</button>
+                    <button onclick="AddRelFromButton(this.value)" value="under">under</button>
+                    <button onclick="AddRelFromButton(this.value)" value="along">along</button>
+                    <button onclick="AddRelFromButton(this.value)" value="above">above</button>
+                    <button onclick="AddRelFromButton(this.value)" value="inside">inside</button>
+                    <button onclick="AddRelFromButton(this.value)" value="in front of" style="font-size: 5px;">in front of</button>
+                </div>
+                <div class="add">
+                    <h2>Add a box</h2>
+                    <button onclick="addRel()">Add relationship</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="con-box left">          
+            <img src="./images/222.png" alt="">
+            <button id="relationship">relationship</button>
+        </div>
+        <div class="con-box right">
+            <img src="./images/222.png" alt="">
+            <button id="attribute">attribute</button>
+        </div>
+    </div>
+    <script>
+        //要操作到的元素
+        let relationship = document.getElementById("relationship");
+        let attribute = document.getElementById("attribute");
+        let form_box = document.getElementsByClassName("from-box")[0];
+        let register_box = document.getElementsByClassName("attribute-box")[0];
+        let login_box = document.getElementsByClassName("relationship-box")[0];
+        //点击去注册按钮点击事件
+        attribute.addEventListener('click',()=>{
+            form_box.style.transform='translateX(80%)';
+            login_box.classList.add('hidden');
+            register_box.classList.remove('hidden');
+        })
+        //点击去登录按钮点击事件
+        relationship.addEventListener('click',()=>{
+            form_box.style.transform='translateX(0%)';
+            register_box.classList.add('hidden');
+            login_box.classList.remove('hidden');
+        })
+    </script>
+    
+    <script type="text/javascript" src="./SG.js"></script>
+
+</body>
+</html>
