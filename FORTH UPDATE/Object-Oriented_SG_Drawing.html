@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="D:\programming\SG\js\go.js"></script>
+    <script src="https://cdn.bootcss.com/FileSaver.js/2014-11-29/FileSaver.js"></script>
+    <link href="SG.css" rel="stylesheet">
+</head>
+<body>
+    <div style="position: absolute" id="myDiagramDiv">
+    </div>
+    
+    <div class="container">
+        <div class="obj-box">
+            <h3>Common Object</h3>
+            <button onclick="AddObjMan()">man</button>
+            <button onclick="AddObjCat()">cat</button>
+            <button onclick="AddObjBus()">bus</button>
+            <button onclick="AddObjCup()">chair</button>
+        </div>
+    </div>
+
+    <div class="containerA">
+        <div class="attri-box">
+            <div class="attri-box1">
+                <h3 id="atttitle">Common Attribute</h3>
+                <h5>Color</h5>
+                <button onclick="AddAttFromButton(this.value)" value="red">red</button>
+                <button onclick="AddAttFromButton(this.value)" value="green">green</button>
+                <button onclick="AddAttFromButton(this.value)" value="blue">blue</button>
+                <button onclick="AddAttFromButton(this.value)" value="white">white</button>
+                <button onclick="AddAttFromButton(this.value)" value="black">black</button>
+                <button onclick="AddAttFromButton(this.value)" value="yellow">yellow</button>
+                <button onclick="AddAttFromButton(this.value)" value="silver">silver</button>
+                <button onclick="AddAttFromButton(this.value)" value="gray">gray</button>
+            </div>
+            <div class="attri-box2">
+                <h5>Emotion</h5>
+                <button onclick="AddAttFromButton(this.value)" value="thinking">thinking</button>
+                <button onclick="AddAttFromButton(this.value)" value="worried">worried</button>
+                <button onclick="AddAttFromButton(this.value)" value="lost">lost</button>
+                <button onclick="AddAttFromButton(this.value)" value="stern">stern</button>
+            </div>
+            <div class="attri-box3">
+                <h5>Appearance</h5>
+                <button onclick="AddAttFromButton(this.value)" value="young">young</button>
+                <button onclick="AddAttFromButton(this.value)" value="old">old</button>
+                <button onclick="AddAttFromButton(this.value)" value="small">small</button>
+                <button onclick="AddAttFromButton(this.value)" value="large">large</button>
+                <button onclick="AddAttFromButton(this.value)" value="wooden">wooden</button>
+                <button onclick="AddAttFromButton(this.value)" value="plastic">plastic</button>
+                <button onclick="AddAttFromButton(this.value)" value="striped">striped</button>
+                <button onclick="AddAttFromButton(this.value)" value="bald">bald</button>
+                <button onclick="AddAttFromButton(this.value)" value="barefoot">barefoot</button>
+                <button onclick="AddAttFromButton(this.value)" value="asian">asian</button>
+            </div>
+            <div class="attri-box4">
+                <h5>Motion</h5>
+                <button onclick="AddAttFromButton(this.value)" value="standing">standing</button>
+                <button onclick="AddAttFromButton(this.value)" value="sitting">sitting</button>
+                <button onclick="AddAttFromButton(this.value)" value="smiling">smiling</button>
+                <button onclick="AddAttFromButton(this.value)" value="playing">playing</button>
+                <button onclick="AddAttFromButton(this.value)" value="looking">looking</button>
+                <button onclick="AddAttFromButton(this.value)" value="flying">flying</button>
+                <button onclick="AddAttFromButton(this.value)" value="walking">walking</button>
+                <button onclick="AddAttFromButton(this.value)" value="eating">eating</button>
+            </div>
+        </div>
+            <div class="add" id="addatt">
+                <h3>Add a box</h3>
+                <button onclick="addAtt()">Add attribute</button>
+            </div>
+    </div> 
+
+    <div class="containerR">
+        <div class="rel-box">
+            <h3>Common Relationship</h3>
+            <button onclick="AddRelFromButton(this.value)" value="on">on</button>
+            <button onclick="AddRelFromButton(this.value)" value="has">has</button>
+            <button onclick="AddRelFromButton(this.value)" value="in">in</button>
+            <button onclick="AddRelFromButton(this.value)" value="wears">wears</button>
+            <button onclick="AddRelFromButton(this.value)" value="behind">behind</button>
+            <button onclick="AddRelFromButton(this.value)" value="next to">next to</button>
+            <button onclick="AddRelFromButton(this.value)" value="near">near</button>
+            <button onclick="AddRelFromButton(this.value)" value="under">under</button>
+            <button onclick="AddRelFromButton(this.value)" value="along">along</button>
+            <button onclick="AddRelFromButton(this.value)" value="above">above</button>
+            <button onclick="AddRelFromButton(this.value)" value="inside">inside</button>
+            <button onclick="AddRelFromButton(this.value)" value="in front of" style="font-size: 5px;">in front of</button>
+        </div>   
+        <div class="add" id="addrel">
+            <h3>Add a box</h3>
+            <button onclick="addRel()">Add relationship</button>
+        </div>
+    </div>
+    <button id="loadfiles">load</button>
+    <button id="SaveButton" onclick="save()">Save</button>
+    <input type="file" id="files" value="load" onclick="load()" name="load">
+    <script type="text/javascript" src="./SG.js"></script>
+
+</body>
+</html>
